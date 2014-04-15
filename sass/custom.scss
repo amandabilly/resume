@@ -1,0 +1,75 @@
+@import "bootstrap";
+
+html { font-size: 16px; }
+
+body > div > div {
+  padding: 2em;
+}
+
+#side {
+  background: $brand-primary;
+  color: $gray-lighter;
+  float: left;
+  font-size: $font-size-small;
+  @media screen and (min-width: 47em) {
+    max-width: 18.75em;
+    width: 30%;
+  }
+  &.is_stuck {
+    left: 0;
+    padding: 2em;
+  }
+  a {
+    color: $gray-lighter;
+    &:hover {
+      color: white;
+    }
+  }
+  h1 {
+    font-size: $font-size-h2;
+  }
+  h2 {
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    font-size: $font-size-h3;
+  }
+}
+
+#wide {
+  @media screen and (min-width: 47em) {
+    overflow: hidden;
+  }
+  h1 {
+    font-size: floor(($font-size-base * 3));
+    margin-bottom: 4%;
+  }
+  &> section {
+    margin: 0 0 12% 0;
+    &> section {
+      margin-bottom: 6%;
+    }
+  }
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  margin: 0 0 .75rem 0;
+  padding: 0 0 .75rem 0;
+}
+
+#logo {
+  @extend .img-circle;
+  @extend .center-block;
+  @include img-responsive;
+}
+
+footer {
+  background: #222;
+  color: $gray-light;
+  font-size: $font-size-small;
+  padding: 3em 0;
+  text-align: center;
+}
