@@ -6318,6 +6318,12 @@ html {
 body > div > div {
   padding: 2em;
 }
+body > div > div > section {
+  margin: 0 0 12% 0;
+}
+body > div > div > section > section {
+  margin-bottom: 6%;
+}
 
 #side {
   background: #00788a;
@@ -6327,13 +6333,16 @@ body > div > div {
 }
 @media screen and (min-width: 47em) {
   #side {
-    max-width: 18.75em;
+    max-width: 21em;
     width: 30%;
   }
 }
 #side.is_stuck {
   left: 0;
   padding: 2em;
+}
+#side.is_stuck > section {
+  margin-bottom: 16%;
 }
 #side a {
   color: #eeeeee;
@@ -6356,13 +6365,13 @@ body > div > div {
 }
 #wide h1 {
   font-size: 48px;
+  margin-top: 5%;
   margin-bottom: 4%;
 }
-#wide > section {
-  margin: 0 0 12% 0;
-}
-#wide > section > section {
-  margin-bottom: 6%;
+@media screen and (min-width: 47em) {
+  #wide h1 {
+    margin-top: 1%;
+  }
 }
 
 h1, h2 {
@@ -6379,6 +6388,32 @@ h2 {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+#contact ul {
+  align-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+#contact ul li {
+  display: inline-block;
+  font-size: 42px;
+  margin: 1% 4%;
+}
+#contact ul li a {
+  opacity: .75;
+}
+#contact ul li a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+#contact ul li a[href*="jsfiddle"] {
+  font-size: 1.2em;
+  line-height: 1;
 }
 
 footer {

@@ -1,9 +1,16 @@
 @import "bootstrap";
+$font-size-icon: ceil(($font-size-base * 2.625));
 
 html { font-size: 16px; }
 
 body > div > div {
   padding: 2em;
+  & > section {
+    margin: 0 0 12% 0;
+    & > section {
+      margin-bottom: 6%;
+    }
+  }
 }
 
 #side {
@@ -12,12 +19,15 @@ body > div > div {
   float: left;
   font-size: $font-size-small;
   @media screen and (min-width: 47em) {
-    max-width: 18.75em;
+    max-width: 21em;
     width: 30%;
   }
   &.is_stuck {
     left: 0;
     padding: 2em;
+    & > section {
+      margin-bottom: 16%;
+    }
   }
   a {
     color: $gray-lighter;
@@ -40,12 +50,10 @@ body > div > div {
   }
   h1 {
     font-size: floor(($font-size-base * 3));
+    margin-top: 5%;
     margin-bottom: 4%;
-  }
-  &> section {
-    margin: 0 0 12% 0;
-    &> section {
-      margin-bottom: 6%;
+    @media screen and (min-width: 47em) {
+      margin-top: 1%;
     }
   }
 }
@@ -64,6 +72,32 @@ h2 {
   @extend .img-circle;
   @extend .center-block;
   @include img-responsive;
+}
+
+#contact ul {
+  align-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  li {
+    display: inline-block;
+    font-size: $font-size-icon;
+    margin: 1% 4%;
+    a {
+      opacity: .75;
+      &:hover {
+        opacity: 1;
+        text-decoration: none;
+      }
+      &[href*="jsfiddle"] {
+        font-size: 1.2em;
+        line-height: 1;
+      }
+    }
+  }
 }
 
 footer {
