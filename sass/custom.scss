@@ -47,13 +47,48 @@ body > div > div {
 #wide {
   @media screen and (min-width: 47em) {
     overflow: hidden;
+    padding: 2em;
   }
   h1 {
     font-size: floor(($font-size-base * 3));
-    margin-top: 5%;
-    margin-bottom: 4%;
+    margin-top: 10%;
+    margin-bottom: 8%;
     @media screen and (min-width: 47em) {
       margin-top: 1%;
+    }
+    .no-rotate {
+      display: inline;
+    }
+    .rotate {
+      display: none;
+    }
+    @media screen and (min-width:47em) {
+      .no-js & {
+        .rotate {
+          display: none;
+        }
+      }
+      .js & {
+        .rotate {
+          display: inline;
+        }
+        .no-rotate {
+          display: none;
+        }
+      }
+    }
+  }
+  .meta {
+    border-left: 1px solid $gray-light;
+    color: $gray-light;
+    p {
+      margin: 0;
+      padding-left: .5em;
+    }
+  }
+  #skills {
+    h3 {
+      @extend h4;
     }
   }
 }
@@ -74,6 +109,41 @@ h2 {
   @include img-responsive;
 }
 
+.quote {
+  margin-bottom: $line-height-computed;
+  blockquote {
+    margin-bottom: 0;
+  }
+  figcaption {
+    @include bq-attr;
+    @include bq-border;
+    @extend .text-right;
+    padding-bottom: ($line-height-computed / 2);
+  }
+}
+
+.carousel-inner {
+  /*figure.item {
+    width: auto;
+    height: 240px;
+    max-height: 240px;
+  }*/
+}
+
+#carousel-quotes {
+  .carousel-control {
+    color: $gray-lighter;
+    text-shadow: none;
+    &.left, &.right {
+      background: none;
+    }
+  }
+  ul {
+    @extend .list-inline;
+    @extend .text-center;
+  }
+}
+
 #contact ul {
   align-content: space-between;
   align-items: center;
@@ -83,11 +153,12 @@ h2 {
   list-style: none;
   padding: 0;
   li {
-    display: inline-block;
+    /*display: inline-block;*/
     font-size: $font-size-icon;
     margin: 1% 4%;
     a {
       opacity: .75;
+      transition: all 1s ease;
       &:hover {
         opacity: 1;
         text-decoration: none;

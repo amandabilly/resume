@@ -19,11 +19,11 @@ module.exports = function(grunt) {
     },
     concat: {
       js: {
-        src: ['js/bootstrap.js', 'js/jquery.simple-text-rotator.js', 'js/jquery.sticky-kit.js', 'js/enquire.min.js', 'js/custom.js'],
+        src: ['js/bootstrap/carousel.js', 'js/bootstrap/modal.js', 'js/jquery.simple-text-rotator.js', 'js/flowtype.js', 'js/jquery.sticky-kit.js', 'js/enquire.min.js', 'js/custom.js'],
         dest: 'dist/js/main.js'
       },
       css: {
-        src: ['sass/css/bootstrap.css', 'sass/css/simpletextrotator.css', 'sass/css/custom.css'],
+        src: ['sass/css/bootstrap.css', 'sass/css/font-awesome.css', 'sass/css/simpletextrotator.css', 'sass/css/custom.css'],
         dest: 'dist/css/main.css'
       }
     },
