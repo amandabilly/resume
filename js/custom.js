@@ -6,6 +6,15 @@ $(document).ready(function() {
   //   maxFont   : 20,
   //   fontRatio : 30
   // });
+
+  $("input").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        $("form").submit();
+    }
+  });
+
+  $('#contact li a').tooltip();
   
   enquire.register("screen and (min-width:47em)", function() {
     
@@ -38,5 +47,9 @@ $(document).ready(function() {
 
   // Boostrap carousel for Xomba testimonials
   $('.carousel-quotes').carousel();
+
+  // $('.thing').waypoint(function(direction) {
+  //   alert('Top of thing hit top of viewport.');
+  // });
 
 });

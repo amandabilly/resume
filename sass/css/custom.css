@@ -411,7 +411,7 @@ hr {
   border: 0;
 }
 
-h1, h2, h3, h4, #wide #skills h3, h5, h6,
+h1, h2, h3, h4, #skills h3, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
@@ -421,9 +421,9 @@ h1, h2, h3, h4, #wide #skills h3, h5, h6,
 h1 small,
 h1 .small, h2 small,
 h2 .small, h3 small,
-h3 .small, h4 small, #wide #skills h3 small,
+h3 .small, h4 small, #skills h3 small,
 h4 .small,
-#wide #skills h3 .small, h5 small,
+#skills h3 .small, h5 small,
 h5 .small, h6 small,
 h6 .small,
 .h1 small,
@@ -456,15 +456,15 @@ h3 .small, .h3 small,
   font-size: 65%;
 }
 
-h4, #wide #skills h3, .h4,
+h4, #skills h3, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 11.5px;
   margin-bottom: 11.5px;
 }
-h4 small, #wide #skills h3 small,
+h4 small, #skills h3 small,
 h4 .small,
-#wide #skills h3 .small, .h4 small,
+#skills h3 .small, .h4 small,
 .h4 .small,
 h5 small,
 h5 .small, .h5 small,
@@ -487,7 +487,7 @@ h3, .h3 {
   font-size: 28px;
 }
 
-h4, #wide #skills h3, .h4 {
+h4, #skills h3, .h4 {
   font-size: 20px;
 }
 
@@ -866,19 +866,19 @@ pre code {
   clear: both;
 }
 
-.row {
+.row, #skills {
   margin-left: -15px;
   margin-right: -15px;
 }
-.row:before, .row:after {
+.row:before, #skills:before, .row:after, #skills:after {
   content: " ";
   display: table;
 }
-.row:after {
+.row:after, #skills:after {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, #skills aside, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, #skills div, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1303,7 +1303,7 @@ pre code {
   }
 }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, #skills aside, .col-md-5, .col-md-6, .col-md-7, .col-md-8, #skills div, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -1319,7 +1319,7 @@ pre code {
     width: 25%;
   }
 
-  .col-md-4 {
+  .col-md-4, #skills aside {
     width: 33.33333%;
   }
 
@@ -1335,7 +1335,7 @@ pre code {
     width: 58.33333%;
   }
 
-  .col-md-8 {
+  .col-md-8, #skills div {
     width: 66.66667%;
   }
 
@@ -2393,7 +2393,7 @@ select[multiple].input-lg,
   outline-offset: -2px;
 }
 .btn:hover, .btn:focus {
-  color: #333333;
+  color: #4adede;
   text-decoration: none;
 }
 .btn:active, .btn.active {
@@ -2412,17 +2412,17 @@ select[multiple].input-lg,
 }
 
 .btn-default {
-  color: #333333;
+  color: #4adede;
   background-color: white;
   border-color: #cccccc;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
-  color: #333333;
+  color: #4adede;
   background-color: #ebebeb;
   border-color: #adadad;
 }
 .open .btn-default.dropdown-toggle {
-  color: #333333;
+  color: #4adede;
   background-color: #ebebeb;
   border-color: #adadad;
 }
@@ -2438,7 +2438,7 @@ select[multiple].input-lg,
 }
 .btn-default .badge {
   color: white;
-  background-color: #333333;
+  background-color: #4adede;
 }
 
 .btn-primary {
@@ -4899,7 +4899,7 @@ a.thumbnail.active {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-.alert h4, .alert #wide #skills h3, #wide #skills .alert h3 {
+.alert h4, .alert #skills h3, #skills .alert h3 {
   margin-top: 0;
   color: inherit;
 }
@@ -6320,13 +6320,15 @@ html {
   font-size: 16px;
 }
 
-body > div > div {
+#wrap > div {
   padding: 2em;
 }
-body > div > div > section {
+
+.module {
   margin: 0 0 12% 0;
 }
-body > div > div > section > section {
+
+.sub-module {
   margin-bottom: 6%;
 }
 
@@ -6369,33 +6371,6 @@ body > div > div > section > section {
     padding: 2em;
   }
 }
-#wide h1 {
-  font-size: 48px;
-  margin-top: 10%;
-  margin-bottom: 8%;
-}
-@media screen and (min-width: 47em) {
-  #wide h1 {
-    margin-top: 1%;
-  }
-}
-#wide h1 .no-rotate {
-  display: inline;
-}
-#wide h1 .rotate {
-  display: none;
-}
-@media screen and (min-width: 47em) {
-  .no-js #wide h1 .rotate {
-    display: none;
-  }
-  .js #wide h1 .rotate {
-    display: inline;
-  }
-  .js #wide h1 .no-rotate {
-    display: none;
-  }
-}
 #wide .meta {
   border-left: 1px solid #999999;
   color: #999999;
@@ -6403,6 +6378,34 @@ body > div > div > section > section {
 #wide .meta p {
   margin: 0;
   padding-left: .5em;
+}
+
+#iam {
+  font-size: 48px;
+  margin-top: 10%;
+  margin-bottom: 8%;
+}
+@media screen and (min-width: 47em) {
+  #iam {
+    margin-top: 1%;
+  }
+}
+#iam .no-rotate {
+  display: inline;
+}
+#iam .rotate {
+  display: none;
+}
+@media screen and (min-width: 47em) {
+  .no-js #iam .rotate {
+    display: none;
+  }
+  .js #iam .rotate {
+    display: inline;
+  }
+  .js #iam .no-rotate {
+    display: none;
+  }
 }
 
 h1, h2 {
@@ -6421,6 +6424,14 @@ h2 {
   height: auto;
 }
 
+#carousel-quotes .carousel-control {
+  color: #eeeeee;
+  text-shadow: none;
+}
+#carousel-quotes .carousel-control.left, #carousel-quotes .carousel-control.right {
+  background: none;
+}
+
 .quote {
   margin-bottom: 23px;
 }
@@ -6437,22 +6448,6 @@ h2 {
 }
 .quote figcaption:before {
   content: '\2014 \00A0';
-}
-
-.carousel-inner {
-  /*figure.item {
-    width: auto;
-    height: 240px;
-    max-height: 240px;
-  }*/
-}
-
-#carousel-quotes .carousel-control {
-  color: #eeeeee;
-  text-shadow: none;
-}
-#carousel-quotes .carousel-control.left, #carousel-quotes .carousel-control.right {
-  background: none;
 }
 
 #contact ul {

@@ -2391,7 +2391,7 @@ select[multiple].input-lg,
   outline-offset: -2px;
 }
 .btn:hover, .btn:focus {
-  color: #333333;
+  color: #4adede;
   text-decoration: none;
 }
 .btn:active, .btn.active {
@@ -2410,17 +2410,17 @@ select[multiple].input-lg,
 }
 
 .btn-default {
-  color: #333333;
+  color: #4adede;
   background-color: white;
   border-color: #cccccc;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
-  color: #333333;
+  color: #4adede;
   background-color: #ebebeb;
   border-color: #adadad;
 }
 .open .btn-default.dropdown-toggle {
-  color: #333333;
+  color: #4adede;
   background-color: #ebebeb;
   border-color: #adadad;
 }
@@ -2436,7 +2436,7 @@ select[multiple].input-lg,
 }
 .btn-default .badge {
   color: white;
-  background-color: #333333;
+  background-color: #4adede;
 }
 
 .btn-primary {

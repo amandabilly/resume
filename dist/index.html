@@ -20,11 +20,11 @@
   </head>
   <body>
 
-    <div class="clearfix" data-sticky_parent>
+    <div id="wrap" class="clearfix" data-sticky_parent>
 
       <div id="side">
 
-        <section>
+        <section class="module">
 
           <img src="img/portrait.jpg" id="logo" alt="Amanda Billy">
 
@@ -41,46 +41,46 @@
 
         </section>
 
-        <section id="contact">
+        <section class="module" id="contact">
           <header>
             <h2>Contact</h2>
           </header>
-          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalContact">Send Me a Message</button>
+          <button class="btn btn-default btn-lg" data-toggle="modal" data-target="#modalContact">Send Me a Message</button>
           <ul>
             <li>
-              <a href="http://amandacbilly.com/blog/" title="Blog">
+              <a href="http://amandacbilly.com/blog/" data-toggle="tooltip" title="Blog">
               <i class="fa fa-home"></i>
               <span class="text-hide">Blog</span></a>
             </li>
             <li>
-              <a href="https://twitter.com/amandacbilly" title="Twitter">
+              <a href="https://twitter.com/amandacbilly" data-toggle="tooltip" title="Twitter">
               <i class="fa fa-twitter"></i>
               <span class="text-hide">Twitter</span></a>
             </li>
             <li>
-              <a href="https://github.com/amandabilly" title="Github">
+              <a href="https://github.com/amandabilly" data-toggle="tooltip" title="Github">
               <i class="fa fa-github"></i>
               <span class="text-hide">Github</span></a>
             </li>
             <li>
-              <a href="http://jsfiddle.net/user/amandabilly/" title="JSFiddle">
+              <a href="http://jsfiddle.net/user/amandabilly/" data-toggle="tooltip" title="JSFiddle">
               &infin;
               <span class="text-hide">JSFiddle</span></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/amandacbilly" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/amandacbilly" data-toggle="tooltip" title="LinkedIn">
               <i class="fa fa-linkedin"></i>
               <span class="text-hide">LinkedIn</span></a>
             </li>
             <li>
-              <a href="https://www.facebook.com/amanda.billy" title="Facebook">
+              <a href="https://www.facebook.com/amanda.billy" data-toggle="tooltip" title="Facebook">
               <i class="fa fa-facebook"></i>
               <span class="text-hide">Facebook</span></a>
             </li>
           </ul>
         </section>
 
-        <section>
+        <section class="module">
           <header>
             <h2>Workflow</h2>
           </header>
@@ -95,14 +95,14 @@
 
       <div id="wide" class="container-fluid">
         <header>
-          <h1>I'm a bit of a <span class="no-rotate">generalist</span><span class="rotate">generalist, multitasker, wild card</span>.</h1>
+          <h1 id="iam">I'm a bit of a <span class="no-rotate">generalist</span><span class="rotate">generalist, multitasker, wild card</span>.</h1>
         </header>
 
-        <section> <!-- Work Experience -->
+        <section class="module"> <!-- Work Experience -->
           <header>
             <h2>Work Experience</h2>
           </header>
-          <section>
+          <section class="sub-module">
             <header>
               <h3>Adjunct Instructor <small>University of Florida</small></h3>
             </header>
@@ -119,7 +119,7 @@
               </div>
             </div>
           </section>
-          <section>
+          <section class="sub-module">
             <header>
               <h3>Secretary <small>First Christian Church</small></h3>
             </header>
@@ -136,7 +136,7 @@
               </ul>
             </div>
           </section>
-          <section>
+          <section class="sub-module">
             <header>
               <h3>Design Intern <small>CoWork Jax</small></h3>
             </header>
@@ -155,7 +155,7 @@
               </ul>
             </div>
           </section>
-          <section id="xomba">
+          <section class="sub-module" id="xomba">
             <header>
               <h3>Editorial Assistant <small>Xomba</small></h3>
             </header>
@@ -211,7 +211,7 @@
               </div>
             </div>
           </section>
-          <section id="lgbt">
+          <section class="sub-module" id="lgbt">
             <header>
               <h3>Student Assistant <small>Univ. of N. Florida LGBT Resource Center</small></h3>
             </header>
@@ -230,11 +230,11 @@
           </section>
         </section> <!-- Work Experience END -->
 
-        <section>
+        <section class="module">
           <header>
             <h2>Volunteer Work</h2>
           </header>
-          <section>
+          <section class="sub-module">
             <header>
               <h3>Christmount Post-College Retreat</h3>
             </header>
@@ -246,17 +246,17 @@
           </section>
         </section>
 
-        <section> <!-- Education -->
+        <section class="module"> <!-- Education -->
           <header>
             <h2>Education</h2>
           </header>
-          <section>
+          <section class="sub-module">
             <header>
               <h3>Masters: Web Design and Online Communications <small>University of Florida</small></h3>
             </header>
             <p>January 2012 - December 2013</p>
           </section>
-          <section>
+          <section class="sub-module">
             <header>
               <h3>Bachelors: Journalism <small>University of North Florida</small></h3>
             </header>
@@ -266,7 +266,7 @@
               <figcaption>Elaine Stevens</figcaption>
             </figure>
           </section>
-          <section>
+          <section class="sub-module">
             <header>
               <h3>Arts Seal: Creative Writing <small>Douglas Anderson School of the Arts</small></h3>
             </header>
@@ -287,35 +287,37 @@
           </aside>
         </section> <!-- Education END -->
 
-        <section id="skills">
-          <header>
-            <h2>Skills</h2>
-          </header>
-          <ul>
-            <li>Semantic HTML (HTML5)</li>
-            <li>CSS, LESS, SASS</li>
-            <li>jQuery</li>
-            <li>WordPress CMS + PHP</li>
-            <li>Mobile First Responsive Design</li>
-            <li>Photoshop CS5</li>
-            <li>InDesign CS5</li>
-            <li>Illustrator CS5</li>
-            <li>Web Analytics</li>
-            <li>Social Media</li>
-          </ul>
-        </section>
+        <section class="module" id="skills">
+          <div>
+            <header>
+              <h2>Skills</h2>
+            </header>
+            <ul>
+              <li>Semantic HTML (HTML5)</li>
+              <li>CSS, LESS, SASS</li>
+              <li>jQuery</li>
+              <li>WordPress CMS + PHP</li>
+              <li>Mobile First Responsive Design</li>
+              <li>Photoshop CS5</li>
+              <li>InDesign CS5</li>
+              <li>Illustrator CS5</li>
+              <li>Web Analytics</li>
+              <li>Social Media</li>
+            </ul>
+          </div>
 
-        <aside>
-          <header>
-            <h3>Less Marketable Skills</h3>
-          </header>
-          <ul>
-            <li>Finding reaction gifs</li>
-            <li>Baking brownies</li>
-            <li>Planning trips</li>
-            <li>Calmly navigating foreign territory</li>
-          </ul>
-        </aside>
+          <aside>
+            <header>
+              <h3>Less Marketable Skills</h3>
+            </header>
+            <ul>
+              <li>Finding reaction gifs</li>
+              <li>Baking brownies</li>
+              <li>Planning trips</li>
+              <li>Calmly navigating foreign territory</li>
+            </ul>
+          </aside>
+        </section>
 
       </div>
     </div>
@@ -363,25 +365,24 @@
               <h4 class="modal-title" >Send Me a Message</h4>
             </div>
             <div class="modal-body">
-              <form role="form">
+              <form role="form" action="http://www.bluehost.com/bluemail" enctype="multipart/form-data" method="POST">
                 <div class="form-group">
                   <label for="formName">Name</label>
-                  <input type="text" class="form-control" placeholder="Enter your name">
+                  <input type="text" class="form-control" placeholder="Enter your name" autofocus>
                 </div>
                 <div class="form-group">
                   <label for="formEmail">Email address</label>
                   <input type="email" class="form-control" id="formEmail" placeholder="Enter email">
                 </div>
                 <div class="form-group">
-                  <label for="formMessage">Email address</label>
+                  <label for="formMessage">Message</label>
                   <textarea id="formMessage" class="form-control" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Send</button>
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="submit" class="btn btn-primary">Send it</button>
             </div>
           </div>
         </div>

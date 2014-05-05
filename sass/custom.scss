@@ -3,14 +3,16 @@ $font-size-icon: ceil(($font-size-base * 2.625));
 
 html { font-size: 16px; }
 
-body > div > div {
+#wrap > div {
   padding: 2em;
-  & > section {
-    margin: 0 0 12% 0;
-    & > section {
-      margin-bottom: 6%;
-    }
-  }
+}
+
+.module {
+  margin: 0 0 12% 0;
+}
+
+.sub-module {
+  margin-bottom: 6%;
 }
 
 #side {
@@ -49,35 +51,6 @@ body > div > div {
     overflow: hidden;
     padding: 2em;
   }
-  h1 {
-    font-size: floor(($font-size-base * 3));
-    margin-top: 10%;
-    margin-bottom: 8%;
-    @media screen and (min-width: 47em) {
-      margin-top: 1%;
-    }
-    .no-rotate {
-      display: inline;
-    }
-    .rotate {
-      display: none;
-    }
-    @media screen and (min-width:47em) {
-      .no-js & {
-        .rotate {
-          display: none;
-        }
-      }
-      .js & {
-        .rotate {
-          display: inline;
-        }
-        .no-rotate {
-          display: none;
-        }
-      }
-    }
-  }
   .meta {
     border-left: 1px solid $gray-light;
     color: $gray-light;
@@ -86,9 +59,34 @@ body > div > div {
       padding-left: .5em;
     }
   }
-  #skills {
-    h3 {
-      @extend h4;
+}
+
+#iam {
+  font-size: floor(($font-size-base * 3));
+  margin-top: 10%;
+  margin-bottom: 8%;
+  @media screen and (min-width: 47em) {
+    margin-top: 1%;
+  }
+  .no-rotate {
+    display: inline;
+  }
+  .rotate {
+    display: none;
+  }
+  @media screen and (min-width:47em) {
+    .no-js & {
+      .rotate {
+        display: none;
+      }
+    }
+    .js & {
+      .rotate {
+        display: inline;
+      }
+      .no-rotate {
+        display: none;
+      }
     }
   }
 }
@@ -109,27 +107,6 @@ h2 {
   @include img-responsive;
 }
 
-.quote {
-  margin-bottom: $line-height-computed;
-  blockquote {
-    margin-bottom: 0;
-  }
-  figcaption {
-    @include bq-attr;
-    @include bq-border;
-    @extend .text-right;
-    padding-bottom: ($line-height-computed / 2);
-  }
-}
-
-.carousel-inner {
-  /*figure.item {
-    width: auto;
-    height: 240px;
-    max-height: 240px;
-  }*/
-}
-
 #carousel-quotes {
   .carousel-control {
     color: $gray-lighter;
@@ -141,6 +118,19 @@ h2 {
   ul {
     @extend .list-inline;
     @extend .text-center;
+  }
+}
+
+.quote {
+  margin-bottom: $line-height-computed;
+  blockquote {
+    margin-bottom: 0;
+  }
+  figcaption {
+    @include bq-attr;
+    @include bq-border;
+    @extend .text-right;
+    padding-bottom: ($line-height-computed / 2);
   }
 }
 
@@ -168,6 +158,19 @@ h2 {
         line-height: 1;
       }
     }
+  }
+}
+
+#skills {
+  @extend .row;
+  div {
+    @extend .col-md-8;
+  }
+  aside {
+    @extend .col-md-4;
+  }
+  h3 {
+    @extend h4;
   }
 }
 
